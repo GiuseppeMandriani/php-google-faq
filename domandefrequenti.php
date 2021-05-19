@@ -35,7 +35,9 @@ $faqs = [
 
         'answer' => 'In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l\'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di <a href="privacy/key-terms#toc-terms-http">URL referrer</a>. Talvolta, l\'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell\'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili <a href="https://support.google.com/websearch/answer/173733">qui</a>. Le query di ricerca o le informazioni contenute nell\'URL referrer potrebbero essere disponibili mediante Google Analytics o un\'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all\' esatte parole chiave che hanno determinato il clic su un annuncio.',
     ],
-]
+];
+
+
 
 ?>
 <!DOCTYPE html>
@@ -56,6 +58,26 @@ $faqs = [
 </head>
 
 <body>
+
+    <!-- php setup -->
+
+    <?php 
+        $page = $_GET['page'];
+        $class = '';
+
+        if(empty($page)){
+            $page = 'error';
+
+        } elseif($page == 'introduzione.php'){
+            $class = 'active';
+        } elseif($page == 'normeprivacy.php'){
+            $class = 'active';
+        } elseif($page == 'tecnologie.php'){
+            $class = 'active';
+        } elseif($page == 'termini.php'){
+            $class = 'active';
+        } 
+    ?>
     <div class="app">
         <header class="header">
         <div class="header-content">
@@ -63,6 +85,8 @@ $faqs = [
                 <div class="row-left">
                     <img src="./images/googlelogo.svg" alt="">
                     <h2 class="title">Privacy e termini</h2>
+                    <h2 class="<?php echo $class;?>">Privacy e termini</h2>
+                    
                 </div>
                 <div class="row-right">
                     <img src="https://lh3.googleusercontent.com/ogw/ADGmqu-uYStsTtiBW01rkB8eEDBIb4rSh2PvQ9lWhjmVxg=s32-c-mo"

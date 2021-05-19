@@ -26,6 +26,10 @@ body {
 
 /* UTILITIES */
 
+.active {
+    color: red;
+}
+
 /* Nav */
 
 .nav-menu {
