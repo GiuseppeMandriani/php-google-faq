@@ -211,3 +211,17 @@ p {
     align-items: center;
     height: 100%;
 }
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.right i {
+    color: #3367d6;
+    margin-right: .2rem;
+}
+
+.lang {
+    width: 200px;
+}

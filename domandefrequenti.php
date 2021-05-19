@@ -48,6 +48,8 @@ $faqs = [
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==' crossorigin='anonymous'/>
     <!-- CSS STYLE -->
     <link rel="stylesheet" href="./css/main.css">
     <title>Google FAQ</title>
@@ -110,11 +112,12 @@ $faqs = [
                 </ul>
                 </div>
                 <div class="right">
-                <select name="" id="">
-                    <option value="">Italiano</option>
-                    <option value="">Francese</option>
-                    <option value="">Inglese</option>
-                </select>
+                    <i class="fas fa-globe"></i>
+                    <select class="lang" name="language" id="language">
+                        <option value="">Italiano</option>
+                        <option value="">Francese</option>
+                        <option value="">Inglese</option>
+                    </select>
                 </div>
                 
                 
