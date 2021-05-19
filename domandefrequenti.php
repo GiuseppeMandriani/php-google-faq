@@ -99,18 +99,25 @@ $faqs = [
 
         </main>
 
-        <footer class="footer ">
+        <footer class="footer">
             <div class="container footer-content">
-                <nav>
-                <ul>
-                    <li><a href="https://about.google/">Introduzione</a></li>
-                    <li><a href="./normeprivacy.php">Norme sulla privacy</a></li>
-                    <li><a href="./termini.php">Termini di servizio</a></li>
-                    <li><a href="./tecnologie.php">Tecnologie</a></li>
-                    <li><a href="./domandefrequenti.php">Domande frequenti</a></li>
+                <div class="left">
+                <ul class ="nav-foot">
+                    <li><a href="https://www.google.com/">Google</a></li>
+                    <li><a href="https://about.google/">Tutto su Google<a></li>
+                    <li><a href="./normeprivacy.php">Privacy</a></li>
+                    <li><a href="./termini.php">Termini</a></li>
                 </ul>
+                </div>
+                <div class="right">
+                <select name="" id="">
+                    <option value="">Italiano</option>
+                    <option value="">Francese</option>
+                    <option value="">Inglese</option>
+                </select>
+                </div>
                 
-                </nav>
+                
             
             </div>
         </footer>
