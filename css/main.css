@@ -9,6 +9,7 @@
 body {
     font-family: 'Open Sans',
         sans-serif;
+    font-size: 14px;
 }
 
 .app {
@@ -43,10 +44,11 @@ body {
     color: #5f6368;
 }
 
-h3 {
+h3,
+h2 {
     font-weight: 400;
     color: #5f6368;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
 
 
@@ -92,10 +94,13 @@ h3 {
 
 .main-content {
     flex-grow: 1;
-    width: 1170px;
-    margin: 0 auto;
     /* background-color: dodgerblue; */
 
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
 }
 
 
