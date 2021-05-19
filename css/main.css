@@ -26,9 +26,7 @@ body {
 
 /* UTILITIES */
 
-.active {
-    color: red;
-}
+
 
 /* Nav */
 
@@ -53,10 +51,13 @@ body {
     font-weight: 700;
 }
 
-.nav-menu li a:focus {
-    color: #3367d6;
-    border-bottom: 1px solid #3367d6;
+.active {
+    color: red;
 }
+
+
+
+
 
 /* Nav foot */
 
@@ -65,7 +66,6 @@ body {
     list-style: none;
     align-items: center;
     position: relative;
-
 
 }
 

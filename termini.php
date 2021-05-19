@@ -14,6 +14,21 @@
     <title>Google Termini Servizio</title>
 </head>
 <body>
+    <!-- php setup -->
+
+    <?php 
+        $pages = array();
+        $pages["introduzione.php."] = 'Introduzione';
+        $pages["normeprivacy.php"] = 'Norme sulla Privacy';
+        $pages["termini.php"] = 'Termini di servizio';
+        $pages["tecnologie.php"] = 'Tecnologie';
+        $pages["domandefrequenti.php"] = 'Domande Frequenti ';
+
+        $activepage = "termini.php.";
+        $class = '';
+
+
+    ?>
     <div class="app">
         <header class="header">
         <div class="header-content">
@@ -31,11 +46,19 @@
             </div>
             <div class="row-bottom">
                 <ul class="nav-menu">
-                    <li><a href="./introduzione.php">Introduzione</a></li>
+                <!-- Loop in php -->
+
+                <?php foreach ($pages as $url => $title){?>
+                    <li>
+                        <a <?php if($url === $activePage): $class = 'active'?> class="<?php echo $class;?>"<?php endif;?> href="<?php echo $url;?>"><?php echo $title;?></a>
+                    </li>
+
+                <?php } ?>
+                    <!-- <li><a href="./introduzione.php">Introduzione</a></li>
                     <li><a href="./normeprivacy.php">Norme sulla privacy</a></li>
                     <li><a href="./termini.php">Termini di servizio</a></li>
                     <li><a href="./tecnologie.php">Tecnologie</a></li>
-                    <li><a href="./domandefrequenti.php">Domande frequenti</a></li>
+                    <li><a href="./domandefrequenti.php">Domande frequenti</a></li> -->
                 </ul>
 
             </div>
