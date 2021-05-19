@@ -56,10 +56,11 @@ $faqs = [
 <body>
     <div class="app">
         <header class="header">
-            <div class="row top">
+        <div class="header-content">
+            <div class="row-top">
                 <div class="row-left">
                     <img src="./images/googlelogo.svg" alt="">
-                    <h3>Privacy e termini</h3>
+                    <h2 class="title">Privacy e termini</h2>
                 </div>
                 <div class="row-right">
                     <img src="https://lh3.googleusercontent.com/ogw/ADGmqu-uYStsTtiBW01rkB8eEDBIb4rSh2PvQ9lWhjmVxg=s32-c-mo"
@@ -68,7 +69,7 @@ $faqs = [
                 </div>
 
             </div>
-            <div class="row bottom">
+            <div class="row-bottom">
                 <ul class="nav-menu">
                     <li><a href="./introduzione.php">Introduzione</a></li>
                     <li><a href="./normeprivacy.php">Norme sulla privacy</a></li>
@@ -78,14 +79,14 @@ $faqs = [
                 </ul>
 
             </div>
+        </div>
 
         </header>
         <main class="main-content container">
 
         <!-- php content -->
 
-        <?php foreach($faqs as $key => $faq){
-        // var_dump($post); ?>
+        
 
             <?php foreach($faqs as $valore){?>
 
@@ -94,12 +95,24 @@ $faqs = [
         
             <?php } ?>
 
-        <?php } ?>
+        
 
         </main>
 
-        <footer class="footer">
-            footer here
+        <footer class="footer ">
+            <div class="container footer-content">
+                <nav>
+                <ul>
+                    <li><a href="https://about.google/">Introduzione</a></li>
+                    <li><a href="./normeprivacy.php">Norme sulla privacy</a></li>
+                    <li><a href="./termini.php">Termini di servizio</a></li>
+                    <li><a href="./tecnologie.php">Tecnologie</a></li>
+                    <li><a href="./domandefrequenti.php">Domande frequenti</a></li>
+                </ul>
+                
+                </nav>
+            
+            </div>
         </footer>
     </div>
 
