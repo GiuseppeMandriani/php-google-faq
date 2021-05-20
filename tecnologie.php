@@ -17,15 +17,15 @@
     <!-- php setup -->
 
     <?php 
-        $pages = array();
-        $pages["introduzione.php."] = 'Introduzione';
-        $pages["normeprivacy.php"] = 'Norme sulla Privacy';
-        $pages["termini.php"] = 'Termini di servizio';
-        $pages["tecnologie.php"] = 'Tecnologie';
-        $pages["domandefrequenti.php"] = 'Domande Frequenti ';
+        $pages = Array();
+            $pages["/php-google-faq/introduzione.php."] = 'Introduzione';
+            $pages["/php-google-faq/normeprivacy.php"] = 'Norme sulla Privacy';
+            $pages["/php-google-faq/termini.php"] = 'Termini di servizio';
+            $pages["/php-google-faq/tecnologie.php"] = 'Tecnologie';
+            $pages["/php-google-faq/domandefrequenti.php"] = 'Domande Frequenti ';
 
-        $activepage = "tecnologie.php.";
-        $class = '';
+
+            $uri["/php-google-faq/domandefrequenti.php"] = 'uri'
 
 
     ?>
@@ -47,12 +47,17 @@
             <div class="row-bottom">
                 <ul class="nav-menu">
                 <!-- Loop in php -->
-                <?php foreach ($pages as $url => $title){?>
+                <?php foreach($pages as $url=>$title):
+
+                    
+                ?>
                     <li>
-                        <a <?php if($url === $activePage):?> class="active"<?php endif;?> href="<?php echo $url;?>"><?php echo $title;?></a>
+                        <a <?php if($url === $_SERVER['REQUEST_URI']): ?>class="active"<?php endif;?> href="<?php echo $url;?>">
+                        <?php echo $title ?>
+                        </a>
                     </li>
 
-                <?php } ?>
+                <?php endforeach;?>
                     <!-- <li><a href="./introduzione.php">Introduzione</a></li>
                     <li><a href="./normeprivacy.php">Norme sulla privacy</a></li>
                     <li><a href="./termini.php">Termini di servizio</a></li>

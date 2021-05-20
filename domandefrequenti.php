@@ -62,15 +62,23 @@ $faqs = [
     <!-- php setup -->
 
     <?php 
-        $pages = array();
-        $pages["introduzione.php."] = 'Introduzione';
-        $pages["normeprivacy.php"] = 'Norme sulla Privacy';
-        $pages["termini.php"] = 'Termini di servizio';
-        $pages["tecnologie.php"] = 'Tecnologie';
-        $pages["domandefrequenti.php"] = 'Domande Frequenti ';
+        $pages = Array();
+            $pages["/php-google-faq/introduzione.php."] = 'Introduzione';
+            $pages["/php-google-faq/normeprivacy.php"] = 'Norme sulla Privacy';
+            $pages["/php-google-faq/termini.php"] = 'Termini di servizio';
+            $pages["/php-google-faq/tecnologie.php"] = 'Tecnologie';
+            $pages["/php-google-faq/domandefrequenti.php"] = 'Domande Frequenti ';
 
-        $activepage = ["domandefrequenti.php."];
-        $class = '';
+
+            $uri["/php-google-faq/domandefrequenti.php"] = 'uri'
+        
+
+
+
+        // echo $activePage;
+
+
+
 
 
     ?>
@@ -93,23 +101,30 @@ $faqs = [
             </div>
             <div class="row-bottom">
                 <ul class="nav-menu">
-                
+                 <?php /*
+                    <li><a class="<?php  ($activePage == 'introduzione') ? 'active' : ''; ?> " href="./introduzione.php">Introduzione</a></li>
+                    <li><a class="<?php  ($activePage == 'normeprivacy') ? 'active' : ''; ?> "  href="./normeprivacy.php">Norme sulla privacy</a></li>
+                    <li><a class="<?php  ($activePage == 'termini') ? 'active' : ''; ?> " href="./termini.php">Termini di servizio</a></li>
+                    <li><a class="<?php  ($activePage == 'tecnologie') ? 'active' : ''; ?> " href="./tecnologie.php">Tecnologie</a></li>
+                    <li><a class="<?php  ($activePage == 'domandefrequenti') ? 'active' : ''; ?> " href="domandefrequenti.php?faq=domandefrequenti">Domande frequenti</a></li>
+    */?>
+
+
                 <!-- Loop in php -->
 
-                <?php foreach ($pages as $url => $title){?>
-                        
+                <?php foreach($pages as $url=>$title):
+
+                    
+                ?>
                     <li>
-                        <a <?php if($url === $activePage):
-                            $class = 'active';
-                        ?> class="<?php echo $class;?>"<?php endif;?> href="<?php echo $url;?>"><?php echo $title;?></a>
+                        <a <?php if($url === $_SERVER['REQUEST_URI']): ?>class="active"<?php endif;?> href="<?php echo $url;?>">
+                        <?php echo $title ?>
+                        </a>
                     </li>
 
-                <?php } ?>
-                    <!-- <li><a href="introduzione.php?intro=introduzione">Introduzione</a></li>
-                    <li><a href="./normeprivacy.php">Norme sulla privacy</a></li>
-                    <li><a href="./termini.php">Termini di servizio</a></li>
-                    <li><a href="./tecnologie.php">Tecnologie</a></li>
-                    <li><a href="domandefrequenti.php?faq=domandefrequenti">Domande frequenti</a></li> -->
+                <?php endforeach;?>
+
+  
                 </ul>
 
             </div>
